@@ -1,0 +1,46 @@
+### Análise de Bandas de Bollinger e Estratégias de Trading
+
+Este projeto visa realizar uma análise de dados históricos do S&P 500(GSPC) usando banda de bollinger
+para desenvolver e visualizar uma simples estratégia a favor da tendência. Lembrando que não se trata
+de nenhuma recomendação de de compra ou venda e sim como forma de educação.
+
+
+# Pré Requisitos
+
+#  Bibliotecas
+ - Pandas - Version: 2.2.2
+ - Yfinance - Version: 0.2.41
+ - Matiplotlib - Version: 3.9.2
+ - Numpy - Version: 2.0.0
+ - Date - Version: 3.12.4
+
+ ## Funcionalidades
+
+ 1 - Dados históricos: Utilizando a Api yfinance para obter os dados
+
+ 2 - Visualização dos dados: Aqui é feito um gráfico da série temporal do preço ajustado de 
+ fechmaneto(Adj Close), para visualizar a evolução do ativo ao longo do período
+
+ 3 - Cálculo das Bandas de Bollinger:
+
+ * Média Móvel(MM) - 50 Períodos
+ * Desvio padrão(desvio) - 50 períodos
+ * Banda Superior(Banda_sup) média móvel + (2* Desvio Padrão)
+ * Banda Inferior(Band_inf) média móvel - (2* Desvio Padrão)
+ 
+ 4 - Visualização das Bandas de Bollinger: Um gráfico é gerado mostrando o preço ajustado de fechamento,
+  média móvel e as bandas superior e inferior.
+
+ 5 - Contrução de alvos e regras de trading:
+
+ * Cálculo do retorno percentual em 3 períodos
+ * Definição de uma regra de trading baseada nas Bandas de Bollinger
+ * Aplicação das regras para calcular o retorno acumulado em juros simples.
+
+ 6 - Visualização do retorno acumulado: Um gráfico mostrando o retorno acumulado da estratégiaao longo
+ do tempo
+
+ * OBS: A ideia desse simples modelo é poder estimular a criatividade e não esgotar o assunto. Você pode
+ alterar o desvio padrão, a média móvel e os desvios. 
+
+
